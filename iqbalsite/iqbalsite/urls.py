@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('home.urls')),
     url(r'^bio/', include('bio.urls')),
+    url(r'^portfolio/', include('portfolio.urls')),
 ]
 
 if settings.DEBUG:

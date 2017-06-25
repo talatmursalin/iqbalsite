@@ -1,0 +1,104 @@
+.home-street {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.row {
+    padding-bottom: 20px;
+}
+.mrow{
+  max-width:1024px;
+margin:auto;
+}
+.stack {
+    position: relative;
+    height: auto;
+    padding: 40px;
+}
+
+.pin {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    right: 0px;
+    top: 21px;
+}
+
+.pin-opp {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    right: 15px;
+    top: -11px;
+    transform: rotate(-30deg);
+}
+
+figcaption {
+    margin-top: 10px;
+    line-height: 40px;
+    vertical-align: middle;
+    color: grey;
+    font-size: 20px;
+    font-family: "Give You Glory", cursive;
+}
+
+.dummy-one {
+    background: white;
+    position: absolute;
+    left: 50px;
+    top: 20;
+    text-align: center;
+    transform: rotate(7deg);
+    border: 15px solid white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.real {
+    background: white;
+    position: absolute;
+    text-align: center;
+    left: 50px;
+    transform: rotate(-3deg);
+    border: 15px solid white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dummy-three {
+    background: white;
+    text-align: center;
+    border: 15px solid white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.opp-dummy-one {
+    position: absolute;
+    left: 50px;
+    top: 20;
+    text-align: center;
+    transform: rotate(-7deg);
+    background: white;
+}
+
+.opp-dummy-one {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    border: 15px solid white;
+    background: white;
+}
+
+.opp-real {
+    border: 15px solid white;
+    position: absolute;
+    text-align: center;
+    left: 50px;
+    transform: rotate(3deg);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    background: white;
+}
+
+.opp-dummy-three {
+    border: 15px solid white;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    background: white;
+}

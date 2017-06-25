@@ -1,0 +1,15 @@
+.wedding{
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.clock{
+  left:20%;
+}
+.msg{
+  font-size: 40px;
+    font-family: 'Poiret One', cursive;
+    padding-left: 20%;
+}

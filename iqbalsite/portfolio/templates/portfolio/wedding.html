@@ -1,0 +1,34 @@
+{% extends 'home/base.html' %}{% block body %} {% load staticfiles %}{% block style %}
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'portfolio/css/flipclock.css' %}">
+<link rel="stylesheet" href="{% static 'portfolio/css/wedding.css' %}">
+<script src="{% static 'portfolio/js/flipclock.js' %}"></script>
+{% endblock %}
+<div class="wedding">
+  <div class="clock"></div>
+  <div class="msg">comming soon...</div>
+</div>
+
+<script type="text/javascript">
+		var clock;
+
+		$(document).ready(function() {
+			var clock;
+
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('welcome')
+		        	}
+		        }
+		    });
+
+		    clock.setTime(2592000);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
+{% endblock %}

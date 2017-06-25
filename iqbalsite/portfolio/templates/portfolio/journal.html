@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+{% block style %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/journal.css' %}">
+{% endblock %}
+{% block body %}
+
+<div class="home-street" id="gallery">
+  {% for dd in data %}
+        <div class="stand row">
+            <div class="col-md-4 my-fig">
+                <div class="dot"></div>
+                <div class="conn"></div>
+                <figure class="opp-rot">
+                    <a href="{{dd.0.href}}" data-lightbox="gallery" data-title="{{dd.0.caption}}"><img src="{{dd.0.img.url}}" alt="img" /></a>
+                    <figcaption>{{dd.0.caption}}</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 my-fig">
+                <div class="dot"></div>
+                <div class="conn"></div>
+                <figure class="rot">
+                    <a href="{{dd.1.href}}" data-lightbox="gallery" data-title="{{dd.1.caption}}"><img src="{{dd.1.img.url}}" alt="img" /></a>
+                    <figcaption>{{dd.1.caption}}</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 my-fig">
+                <div class="dot"></div>
+                <div class="conn"></div>
+                <figure class="opp-rot">
+                    <a href="{{dd.2.href}}" data-lightbox="gallery" data-title="{{dd.2.caption}}"><img src="{{dd.2.img.url}}" alt="img" /></a>
+                    <figcaption>{{dd.2.caption}}</figcaption>
+                </figure>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

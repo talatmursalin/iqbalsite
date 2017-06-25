@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
+figure{
+  font-family: "Give You Glory", cursive;
+  color:black;
+}
 figure img {
     width: 100%;
     height: auto;
@@ -12,6 +15,7 @@ figure img {
 body {
     /*background-image: url("http://www.designbolts.com/wp-content/themes/dotmag/images/pattern12.png");*/
     background: url("../asset/bg.png");
+    font-family: 'Raleway', sans-serif;
 }
 
 .mid {
@@ -48,7 +52,9 @@ body {
 .nav li a:focus {
     background: transparent;
 }
-
+.nav .open > a, .nav .open > a:focus{
+  background: transparent;
+}
 .nav li ul {
     background: rgba(255, 255, 255, .3);
 }
@@ -61,10 +67,6 @@ body {
     border-bottom: 1px solid #1e1e1e;
 }
 
-.nav li:hover>ul {
-    display: block;
-    z-index: 9;
-}
 
 
 /*home*/
@@ -79,8 +81,9 @@ body {
 .main-frame {
     margin: 0 auto;
     width: 70%;
+    max-width: 900px;
     height: 10%;
-    border: 17px solid #171717;
+    border: 20px solid #171717;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
     margin-top: 50px;
     margin-bottom: 50px;
@@ -92,7 +95,7 @@ body {
     border-left: 1px solid white;
     border-right: 1px solid white;
     */
-    border: 15px solid white;
+    border: 17px solid white;
 }
 
 .foot {
@@ -107,7 +110,10 @@ body {
     text-align: center;
     vertical-align: middle;
 }
-
+.add a{
+  text-decoration: none;
+  color:white;
+}
 .add p {
     padding: 0;
     margin: 0;
@@ -135,9 +141,6 @@ if it's not present, don't show loader */
 }
 
 @media screen and (max-width: 820px) {
-    body {
-        background: red;
-    }
     figure img {
         max-width: 300px;
     }
