@@ -6,3 +6,6 @@ class HomeImage(models.Model):
     href = models.CharField(max_length=500)
     caption = models.CharField(max_length=100)
     backtext = models.TextField(max_length=500)
+
+    def __str__(self):
+        return self.caption

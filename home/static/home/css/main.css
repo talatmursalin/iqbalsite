@@ -9,7 +9,6 @@ figure{
 figure img {
     width: 100%;
     height: auto;
-    min-width: 200px;
 }
 
 body {
@@ -26,6 +25,15 @@ body {
 
 .navbar {
     padding: 5px;
+}
+
+#navbar-logo{
+  background: url("../asset/logo.png") no-repeat center;
+  float: left;
+  margin-top: 12px;
+  display: inline-block;
+  width: 240px;
+  height: 50px;
 }
 
 .mynav {
@@ -140,12 +148,78 @@ if it's not present, don't show loader */
     background: url('../asset/loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
 }
 
+.alter{
+  display: none;
+}
+
+
+.left-menu{
+  display: none;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  top: 30px;
+  left: -30px;
+  background: transparent url("../asset/left-menu.png") no-repeat center 40%;
+  border:1px solid transparent;
+  transform: rotate(180deg);
+  cursor: pointer;
+  position: absolute;
+  transition: .5s;
+}
+.rotate-menu{
+  transform: rotate(0deg);
+  transition: .5s;
+}
 @media screen and (max-width: 820px) {
+  .alter{
+    display: block;
+    background: gainsboro;
+  }
+  .home{
+    background: gainsboro;
+  }
+  .left-menu{
+    display: block;
+  }
+  .alter p{
+    font-family: "Give You Glory", cursive;
+    font-size: 25px;
+    text-align: center;
+    background: gainsboro;
+    padding-top: 15px;
+  }
+  .photostack{
+    display: none;
+  }
     figure img {
         max-width: 300px;
     }
-    .foot {
-        line-height: 75px;
-        height: 75px;
-    }
+
+#navbar-logo{
+  background: url("../asset/logo-small.png") no-repeat center;
+  width: 165px;
+}
+.slash-hide{
+  display: none;
+}
+.foot-row{
+  margin-top: 20px;
+}
+.foot {
+        line-height: 35px;
+        height: 35px;
+}
+.dropdown-menu {
+      background: #f9f9f9;
+}
+.dropdown-menu li a{
+  background: transparent;
+  text-decoration: none;
+}
+.dropdown-menu li a:hover{
+  color:#fed702;
+  text-decoration: none;
+}
+
 }

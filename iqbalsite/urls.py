@@ -25,6 +25,11 @@ urlpatterns = [
     url(r'^portfolio/', include('portfolio.urls')),
 ]
 
+handler403 = 'home.views.handler403' #permission denied
+handler404 = 'home.views.handler404' #page not found
+handler400 = 'home.views.handler400' #bad request
+handler500 = 'home.views.handler500' #server error
+
 if settings.DEBUG:
     urlpatterns+=static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
     urlpatterns+=static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

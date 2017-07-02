@@ -7,7 +7,7 @@ def wedding(request):
     return render(request,'portfolio/wedding.html',context)
 
 def journal(request):
-    all_img = JournalImage.objects.all()
+    all_img = reversed(JournalImage.objects.all())
     x=0
     temp=list()
     data = list()

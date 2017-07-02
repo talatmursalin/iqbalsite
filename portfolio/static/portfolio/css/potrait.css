@@ -29,8 +29,8 @@ margin:auto;
     position: absolute;
     width: 50%;
     height: auto;
-    right: 15px;
-    top: -11px;
+    right: 0px;
+    top: -8px;
     transform: rotate(-30deg);
 }
 
@@ -101,4 +101,13 @@ figcaption {
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     background: white;
+}
+
+@media screen and (max-width: 820px) {
+figure a img{
+  max-width: 170px;
+}
+.pin-opp {
+    top: -2px;
+}
 }
