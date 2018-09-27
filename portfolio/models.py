@@ -9,38 +9,38 @@ from django.dispatch import receiver
 class WeddingImage(models.Model):
     img = models.FileField();
     href = models.CharField(max_length=500)
-    caption = models.CharField(max_length=100)
-    desc = models.TextField(max_length=500)
+    caption = models.CharField(max_length=100, blank=True)
+    desc = models.TextField(max_length=500,default="***")
 
     def __str__(self):
-        return self.caption
+        return self.img.url
 
 class JournalImage(models.Model):
     img = models.FileField();
     href = models.CharField(max_length=500)
-    caption = models.CharField(max_length=100)
-    desc = models.TextField(max_length=500)
+    caption = models.CharField(max_length=100, blank=True)
+    desc = models.TextField(max_length=500, default="***")
 
     def __str__(self):
-        return self.caption
+        return self.img.url
 
 class PotraitImage(models.Model):
     img = models.FileField();
     href = models.CharField(max_length=500)
-    caption = models.CharField(max_length=100)
-    desc = models.TextField(max_length=500)
+    caption = models.CharField(max_length=100, blank=True)
+    desc = models.TextField(max_length=500, default="***")
 
     def __str__(self):
-        return self.caption
+        return self.img.url
 
 class StillImage(models.Model):
-    img = models.FileField();
+    img = models.FileField()
     href = models.CharField(max_length=500)
-    caption = models.CharField(max_length=100)
-    desc = models.TextField(max_length=500)
+    caption = models.CharField(max_length=100, blank=True)
+    desc = models.TextField(max_length=500, default="***")
 
     def __str__(self):
-        return self.caption
+        return self.img.url
 
 @receiver(models.signals.pre_save, sender=JournalImage)
 def auto_delete_file_on_change(sender, instance, **kwargs):

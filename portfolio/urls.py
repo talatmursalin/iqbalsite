@@ -4,8 +4,8 @@ from . import views
 app_name = 'portfolio'
 
 urlpatterns = [
-    url(r'^wedding/$', views.wedding,name='wedding'),
-    url(r'^potrait/$', views.potrait,name='potrait'),
-    url(r'^journal/$', views.journal,name='journal'),
-    url(r'^still/$', views.still,name='still'),
+    url(r'^food/$', views.wedding,name='wedding'),
+    url(r'^travelwild/$', views.potrait,name='potrait'),
+    url(r'^conceptual/$', views.journal,name='journal'),
+    url(r'^street/$', views.still,name='still'),
 ]
