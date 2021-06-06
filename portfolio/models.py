@@ -4,16 +4,18 @@ from django.db import models
 import os
 from django.dispatch import receiver
 
+
 # Create your models here.
 
 class WeddingImage(models.Model):
     img = models.FileField();
     href = models.CharField(max_length=500)
     caption = models.CharField(max_length=100, blank=True)
-    desc = models.TextField(max_length=500,default="***")
+    desc = models.TextField(max_length=500, default="***")
 
     def __str__(self):
         return self.img.url
+
 
 class JournalImage(models.Model):
     img = models.FileField();
@@ -24,6 +26,7 @@ class JournalImage(models.Model):
     def __str__(self):
         return self.img.url
 
+
 class PotraitImage(models.Model):
     img = models.FileField();
     href = models.CharField(max_length=500)
@@ -33,6 +36,7 @@ class PotraitImage(models.Model):
     def __str__(self):
         return self.img.url
 
+
 class StillImage(models.Model):
     img = models.FileField()
     href = models.CharField(max_length=500)
@@ -41,6 +45,7 @@ class StillImage(models.Model):
 
     def __str__(self):
         return self.img.url
+
 
 @receiver(models.signals.pre_save, sender=JournalImage)
 def auto_delete_file_on_change(sender, instance, **kwargs):
@@ -57,11 +62,7 @@ def auto_delete_file_on_change(sender, instance, **kwargs):
     except JournalImage.DoesNotExist:
         return False
 
-    print "---------1",old_file.path
-
     new_file = instance.img
     if not old_file == new_file:
-        print "---------2",old_file.path
         if os.path.isfile(old_file.path):
             os.remove(old_file.path)
-            print "--------3",old_file.path
