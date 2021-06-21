@@ -17,9 +17,15 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.body-wrapper{
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
 .mid {
     margin: auto;
     width: 85%;
+    /*max-width: 1800px;*/
     margin-top: 2%;
 }
 
