@@ -22,11 +22,14 @@ body {
     margin: 0 auto;
 }
 
+.all-bt-footer{
+    min-height: calc(100vh - 2*200px);
+}
+
 .mid {
-    margin: auto;
     width: 85%;
     /*max-width: 1800px;*/
-    margin-top: 2%;
+    margin: 2% auto auto;
 }
 
 .navbar {
@@ -86,21 +89,18 @@ body {
 /*home*/
 
 .border {
-    margin: 0 auto;
     width: 85%;
     border-top: 1px solid #fed702;
-    margin-top: 3%;
+    margin: 3% auto 0;
 }
 
 .main-frame {
-    margin: 0 auto;
     width: 70%;
     max-width: 900px;
     height: 10%;
     border: 20px solid #171717;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px auto;
     transform: rotate(-2deg);
 }
 
@@ -146,8 +146,8 @@ if it's not present, don't show loader */
 
 .loader {
     position: fixed;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 9999;
