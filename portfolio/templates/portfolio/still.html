@@ -4,24 +4,27 @@
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/still.css' %}">
 {% endblock %}
 {% block body %}
-<div class="home-journal" id="gallery">
+<div class="home-journal" id="lightgallery">
   {% for dd in data %}
     <div class="wrapper">
         <div class="shelf-pack">
             <div class="my-fig">
-                <figure>
+                <figure class="photo-item" data-src="{{ dd.0.img.url }}"
+                                data-sub-html="<h4>{{ dd.0.caption }}</h4>">
                     <a href="{{dd.0.img.url}}" data-lightbox="gallery" data-title="{{dd.0.caption}}"><img src="{{dd.0.img.url}}" class="book"></a>
                     <figcaption>{{dd.0.caption}}</figcaption>
                 </figure>
             </div>
             <div class="my-fig">
-                <figure>
+                <figure class="photo-item" data-src="{{ dd.1.img.url }}"
+                                data-sub-html="<h4>{{ dd.1.caption }}</h4>">
                     <a href="{{dd.1.img.url}}" data-lightbox="gallery" data-title="{{dd.1.caption}}"><img src="{{dd.1.img.url}}" class="book"></a>
                     <figcaption>{{dd.1.caption}}</figcaption>
                 </figure>
             </div>
             <div class="my-fig">
-                <figure>
+                <figure class="photo-item" data-src="{{ dd.2.img.url }}"
+                                data-sub-html="<h4>{{ dd.2.caption }}</h4>">
                     <a href="{{dd.2.img.url}}" data-lightbox="gallery" data-title="{{dd.2.caption}}"><img src="{{dd.2.img.url}}" class="book"></a>
                     <figcaption>{{dd.2.caption}}</figcaption>
                 </figure>

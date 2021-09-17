@@ -7,129 +7,143 @@
     <title>AsifIqbalPhotography</title>
     {% load static %}
     <link rel="icon" href="{% static 'home/asset/icon.png' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/side.css' %}" />
-		<link rel="stylesheet" type="text/css" href="{% static 'home/css/side-component.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/normalize.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/component.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/lightbox.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/side-nav.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/photostack.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome_free/css/all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/animate.min.css' %}">
+    <!-- light gallery -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/lightgallery.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/lightgallery-bundle.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/main.css' %}"/>
+    {% block style %}{% endblock %}
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Give+You+Glory" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/main.css' %}" /> {% block style %}{% endblock %}
-    <script type="text/javascript" src="{% static 'home/js/jquery.js' %}"></script>
-    <script src="{% static 'home/js/modernizr.min.js' %}"></script>
+    <link href="https://fonts.googleapis.com/css?family=Give+You+Glory" rel="stylesheet">
+    <script src="{% static 'home/js/jquery-1.12.4.min.js' %}"></script>
     <script type="text/javascript">
-        $(window).load(function() {
+        $(window).load(function () {
             $(".loader").fadeOut("slow");
         })
     </script>
 </head>
 
 <body class="cbp-spmenu-push">
-    <div class="body-wrapper">
-        <div class="loader"></div>
-        <header class="navbar mid" role="navigation">
-            <div class="navbar-header">
-                <a id= "navbar-logo" href="{% url 'home:index' %}"></a>
-            </div>
-            <button class="left-menu" id="showLeftPush"></button>
-            <!--<a id="showLeftPush" class="test" role="button">hi</a>-->
-            <nav class="mynav navbar-collapse navbar-right slash-hide">
-                <ul class="nav navbar-nav">
-                    <li><a href="{% url 'home:index' %}">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">portfolio</a>
-                        <ul class="dropdown-menu animated slideInDown">
-                            <li><a href="{% url 'portfolio:journal' %}">conceptual</a></li>
-                            <li><a href="{% url 'portfolio:potrait' %}">travel & wildlife</a></li>
-                            <li><a href="{% url 'portfolio:still' %}">potrait & streets</a></li>
-                            <li><a href="{% url 'portfolio:wedding' %}">Food Photography</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#client">client</a></li>
-                    <li><a href="{% url 'bio:bio' %}">bio</a></li>
-                </ul>
-            </nav>
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-                <ul>
-                    <li><a href="{% url 'home:index' %}">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">portfolio</a>
-                        <ul class="dropdown-menu animated slideInDown">
-                            <li><a href="{% url 'portfolio:journal' %}">conceptual</a></li>
-                            <li><a href="{% url 'portfolio:potrait' %}">travel & wildlife</a></li>
-                            <li><a href="{% url 'portfolio:still' %}">potrait & streets</a></li>
-                            <li><a href="{% url 'portfolio:wedding' %}">Food Photography</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#client">client</a></li>
-                    <li><a href="{% url 'bio:bio' %}">bio</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="border"></div>
-        <div class="all-bt-footer">
-            {% block body %}{% endblock %}
+<div class="body-wrapper">
+    <div class="loader"></div>
+    <header class="navbar mid">
+        <div class="navbar-header">
+            <a id="navbar-logo" href="{% url 'home:index' %}"></a>
         </div>
-        <div class="foot">
-            <div class="row">
-                <div class="col-md-4 add">
-                    <p>ajompur@gmail.com</p>
-                </div>
-                <div class="col-md-4 add">
-                    <a href="https://www.facebook.com/mohammad.aditto"><i class="fa fa-facebook" style="padding-right:10px;"></i></a>
-                    <a href="#"><i class="fa fa-twitter" style="padding-right:10px;"></i></a>
-                    <a href="#"><i class="fa fa-flickr" style="padding-right:10px;"></i></a>
-                </div>
-                <div class="col-md-4 add">
-                    <img class="slash-hide" src="{% static 'home/asset/slash.png' %}"> &copy; Asif Iqbal
-                </div>
-            </div>
-        </div>
-        <script src="https://use.fontawesome.com/618e19295e.js"></script>
-        <script type="text/javascript" src="{% static 'home/js/bootstrap.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'home/js/lightbox.js' %}"></script>
-        <script src="{% static 'home/js/classie.js' %}"></script>
-        <script>
-                var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
-                    showLeftPush = document.getElementById( 'showLeftPush' ),
-                    body = document.body;
-
-                showLeftPush.onclick = function() {
-                    classie.toggle( this, 'active' );
-            classie.toggle(this,'rotate-menu')
-                    classie.toggle( body, 'cbp-spmenu-push-toright' );
-                    classie.toggle( menuLeft, 'cbp-spmenu-open' );
-                    disableOther( 'showLeftPush' );
-                };
-
-                function disableOther( button ) {
-                    if( button !== 'showLeft' ) {
-                        classie.toggle( showLeft, 'disabled' );
-                    }
-                    if( button !== 'showRight' ) {
-                        classie.toggle( showRight, 'disabled' );
-                    }
-                    if( button !== 'showTop' ) {
-                        classie.toggle( showTop, 'disabled' );
-                    }
-                    if( button !== 'showBottom' ) {
-                        classie.toggle( showBottom, 'disabled' );
-                    }
-                    if( button !== 'showLeftPush' ) {
-                        classie.toggle( showLeftPush, 'disabled' );
-                    }
-                    if( button !== 'showRightPush' ) {
-                        classie.toggle( showRightPush, 'disabled' );
-                    }
-                }
-            </script>
-        {% block jsblock %}{% endblock %}
+        <button class="left-menu" id="showLeftPush"></button>
+        <nav class="mynav navbar-collapse navbar-right slash-hide">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'home:index' %}">Home</a></li>
+                <li class="menu-item">
+                    <a href="#0">gallery</a>
+                    <ol class="sub-menu">
+                        <li class="menu-item"><a href="{% url 'portfolio:journal' %}">conceptual</a></li>
+                        <li class="menu-item"><a href="{% url 'portfolio:potrait' %}">travel & wildlife</a></li>
+                        <li class="menu-item"><a href="{% url 'portfolio:still' %}">portrait & streets</a></li>
+                        <li class="menu-item"><a href="{% url 'portfolio:wedding' %}">Food Photography</a></li>
+                    </ol>
+                </li>
+                <li><a href="#client">client</a></li>
+                <li><a href="{% url 'bio:bio' %}">bio</a></li>
+            </ul>
+        </nav>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+            <ul>
+                <li><a href="{% url 'home:index' %}">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">portfolio</a>
+                    <ul class="dropdown-menu animated slideInDown">
+                        <li><a href="{% url 'portfolio:journal' %}">conceptual</a></li>
+                        <li><a href="{% url 'portfolio:potrait' %}">travel & wildlife</a></li>
+                        <li><a href="{% url 'portfolio:still' %}">potrait & streets</a></li>
+                        <li><a href="{% url 'portfolio:wedding' %}">Food Photography</a></li>
+                    </ul>
+                </li>
+                <li><a href="#client">client</a></li>
+                <li><a href="{% url 'bio:bio' %}">bio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="border"></div>
+    <div class="all-bt-footer">
+        {% block body %}{% endblock %}
     </div>
+    <div class="foot">
+        <div class="row">
+            <div class="col-md-4 add">
+                <p>ajompur@gmail.com</p>
+            </div>
+            <div class="col-md-4 add social-icons">
+                <a href="https://www.facebook.com/mohammad.aditto"><i class="fab fa-facebook-f"
+                ></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-flickr"></i></a>
+            </div>
+            <div class="col-md-4 add">
+                <img class="slash-hide" src="{% static 'home/asset/slash.png' %}"> &copy; Asif Iqbal
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+    <!-- js for lightgallery -->
+    <script src="{% static 'home/js/lightgallery.min.js' %}"></script>
+    <script src="{% static 'home/js/lg-zoom.min.js' %}"></script>
+    <script src="{% static 'home/js/lg-fullscreen.min.js' %}"></script>
+    <script src="{% static 'home/js/lg-relative-caption.min.js' %}"></script>
+    <script src="{% static 'home/js/lg-rotate.min.js' %}"></script>
+    <script src="{% static 'home/js/lg-thumbnail.min.js' %}"></script>
+    <!-- js required by photostack -->
+    <script src="{% static 'home/js/modernizr.min.js' %}"></script>
+    <script src="{% static 'home/js/classie.js' %}"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'), {
+            selector: '.photo-item',
+            download: false,
+            plugins: [lgZoom, lgFullscreen, lgRotate, lgThumbnail, lgRelativeCaption],
+            speed: 500,
+        });
+    </script>
+    <script>
+        var menuLeft = document.getElementById('cbp-spmenu-s1'),
+            showLeftPush = document.getElementById('showLeftPush'),
+            body = document.body;
+
+        showLeftPush.onclick = function () {
+            classie.toggle(this, 'active');
+            classie.toggle(this, 'rotate-menu')
+            classie.toggle(body, 'cbp-spmenu-push-toright');
+            classie.toggle(menuLeft, 'cbp-spmenu-open');
+            disableOther('showLeftPush');
+        };
+
+        function disableOther(button) {
+            if (button !== 'showLeft') {
+                classie.toggle(showLeft, 'disabled');
+            }
+            if (button !== 'showRight') {
+                classie.toggle(showRight, 'disabled');
+            }
+            if (button !== 'showTop') {
+                classie.toggle(showTop, 'disabled');
+            }
+            if (button !== 'showBottom') {
+                classie.toggle(showBottom, 'disabled');
+            }
+            if (button !== 'showLeftPush') {
+                classie.toggle(showLeftPush, 'disabled');
+            }
+            if (button !== 'showRightPush') {
+                classie.toggle(showRightPush, 'disabled');
+            }
+        }
+    </script>
+    {% block jsblock %}{% endblock %}
+</div>
 </body>
 
 </html>

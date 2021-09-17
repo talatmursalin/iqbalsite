@@ -1,103 +1,98 @@
 {% extends 'home/base.html' %}
 {% block style %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/potrait.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/potrait.css' %}">
 {% endblock %}
 {% block body %}
-{% for dd in data %}
-<div id="gallery">
+    <div id="lightgallery">
+        {% for dd in data %}
+            <div class="row mrow">
+                <div class="col-md-4 stack">
+                    <div class="dummy-one">
+                        <figure>
+                            <a>
+                                <img src="{{ dd.0.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="real">
+                        <figure class="photo-item" data-src="{{ dd.0.img.url }}"
+                                data-sub-html="<h4>{{ dd.0.caption }}</h4>">
+                            <a href="{{ dd.0.img.url }}">
+                                <img src="{{ dd.0.img.url }}" alt="img">
+                            </a>
+                            <figcaption>{{ dd.0.caption }}</figcaption>
+                        </figure>
+                    </div>
+                    <div class="pin">
+                        <img src="{% static 'home/asset/paperclip.png' %}" alt="">
+                    </div>
+                    <div class="dummy-three">
+                        <figure>
+                            <a>
+                                <img src="{{ dd.0.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-4 stack">
+                    <div class="opp-dummy-one">
+                        <figure>
+                            <a>
+                                <img src="{{ dd.1.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="opp-real">
+                        <figure class="photo-item" data-src="{{ dd.1.img.url }}"
+                                data-sub-html="<h4>{{ dd.1.caption }}</h4>">
+                            <a href="{{ dd.1.img.url }}">
+                                <img src="{{ dd.1.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="pin-opp">
+                        <img src="{% static 'home/asset/paperclip.png' %}" alt="">
+                    </div>
+                    <div class="opp-dummy-three">
+                        <figure>
+                            <a href="{{ dd.1.href }}">
+                                <img src="{{ dd.1.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-4 stack">
+                    <div class="dummy-one">
+                        <figure>
+                            <a>
+                                <img src="{{ dd.2.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="real">
+                        <figure class="photo-item" data-src="{{ dd.2.img.url }}"
+                                data-sub-html="<h4>{{ dd.2.caption }}</h4>">
+                            <a href="{{ dd.2.img.url }}">
+                                <img src="{{ dd.2.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="pin">
+                        <img src="{% static 'home/asset/paperclip.png' %}" alt="">
+                    </div>
+                    <div class="dummy-three">
+                        <figure>
+                            <a>
+                                <img src="{{ dd.2.img.url }}" alt="img">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
 
-        <div class="row mrow">
-            <div class="col-md-4 stack">
-                <div class="dummy-one">
-                    <figure>
-                        <a>
-                            <img  src="{{dd.0.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.0.caption}}</figcaption>
-                    </figure>
-                </div>
-                <div class="real">
-                    <figure>
-                        <a href="{{dd.0.img.url}}" data-lightbox="{{dd.0.img.url}}" data-title="{{dd.0.caption}}">
-                            <img  src="{{dd.0.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.0.caption}}</figcaption>
-                    </figure>
-                </div>
-                <div class="pin">
-                    <img src="{% static 'home/asset/paperclip.png' %}" alt="">
-                </div>
-                <div class="dummy-three">
-                    <figure>
-                        <a>
-                            <img  src="{{dd.0.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.0.caption}}</figcaption>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-md-4 stack">
-                <div class="opp-dummy-one">
-                    <figure>
-                        <a>
-                            <img  src="{{dd.1.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.1.caption}}</figcaption>
-                    </figure>
-                </div>
-                <div class="opp-real">
-                    <figure>
-                        <a href="{{dd.1.img.url}}" data-lightbox="{{dd.1.img.url}}" data-title="{{dd.1.caption}}">
-                            <img  src="{{dd.1.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.1.caption}}</figcaption>
-                    </figure>
-                </div>
-                <div class="pin-opp">
-                    <img src="{% static 'home/asset/paperclip.png' %}" alt="">
-                </div>
-                <div class="opp-dummy-three">
-                    <figure>
-                        <a href="{{dd.1.href}}">
-                            <img  src="{{dd.1.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.1.caption}}</figcaption>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-md-4 stack">
-                <div class="dummy-one">
-                    <figure>
-                        <a>
-                            <img  src="{{dd.2.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.2.caption}}</figcaption>
-                    </figure>
-                </div>
-                <div class="real">
-                    <figure>
-                        <a href="{{dd.2.img.url}}" data-lightbox="{{dd.2.img.url}}" data-title="{{dd.2.caption}}">
-                            <img  src="{{dd.2.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.2.caption}}</figcaption>
-                    </figure>
-                </div>
-                <div class="pin">
-                    <img src="{% static 'home/asset/paperclip.png' %}" alt="">
-                </div>
-                <div class="dummy-three">
-                    <figure>
-                        <a>
-                            <img  src="{{dd.2.img.url}}" alt="img">
-                        </a>
-                        <figcaption>{{dd.2.caption}}</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-</div>
-{% endfor %}
+        {% endfor %}
+    </div>
     {% block jsblock %}
-{% endblock %}
+    {% endblock %}
 {% endblock %}

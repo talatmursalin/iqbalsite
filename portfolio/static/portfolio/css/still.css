@@ -1,9 +1,7 @@
 .home-journal {
     width: 80%;
-    max-width: 1024;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 10px auto 40px;
 }
 .wrapper{
   margin: auto;
@@ -27,18 +25,8 @@ figure {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 }
 
-figcaption {
-    margin-top: 10px;
-    line-height: 40px;
-    vertical-align: middle;
-    color: grey;
-    font-size: 20px;
-    font-family: "Give You Glory", cursive;
-}
-
 .shelf-pack {
-    margin: auto;
-    margin-bottom: 10px;
+    margin: auto auto 10px;
     display: table;
 }
 

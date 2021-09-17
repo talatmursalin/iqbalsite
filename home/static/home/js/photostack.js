@@ -423,6 +423,7 @@
 			else {
 				classie.addClass( this.navDots[ this.current ], 'flip' );
 				if( support.preserve3d ) {
+					// rotates
 					this.currentItem.style.WebkitTransform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
 					this.currentItem.style.transform = 'translate(' + this.centerItem.x + 'px,' + this.centerItem.y + 'px) translate(' + this.sizes.item.width + 'px) rotateY(-179.9deg)';
 				}
