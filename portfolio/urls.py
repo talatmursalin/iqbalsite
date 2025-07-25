@@ -1,11 +1,11 @@
-from django.conf.urls import url
+from django.urls import re_path
 from . import views
 
 app_name = 'portfolio'
 
 urlpatterns = [
-    url(r'^food/$', views.wedding,name='wedding'),
-    url(r'^travelwild/$', views.potrait,name='potrait'),
-    url(r'^conceptual/$', views.journal,name='journal'),
-    url(r'^street/$', views.still,name='still'),
+    re_path(r'^food/$', views.wedding,name='wedding'),
+    re_path(r'^travelwild/$', views.potrait,name='potrait'),
+    re_path(r'^conceptual/$', views.journal,name='journal'),
+    re_path(r'^street/$', views.still,name='still'),
 ]
